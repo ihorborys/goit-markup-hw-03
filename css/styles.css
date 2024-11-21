@@ -1,0 +1,204 @@
+:root {
+    --first-family: "Roboto", sans-serif;
+    --second-family: "Raleway", sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    --iris: #4d5ae5;
+    --ocean: #404bbf;
+    --navy-blue: #2e2f42;
+    --green: #31d0aa;
+    --slate: #434455;
+    --light-slate: #8e8f99;
+    --cornflower: #e7e9fc;
+    --cloud: #f4f4fd;
+    --navy-blue-modal: rgba(46, 47, 66, 0.4);
+    --grey: rgba(46, 47, 66, 0.7);
+    --white: #ffffff;
+    --dairy: #fcfcfc;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--white);
+    color: var(--slate);
+}
+
+/* Скидання підкреслення для посилань */
+a {
+    text-decoration: none; /* Видаляє підкреслення */
+}
+
+/* Видалення маркерів для списків */
+ul,
+ol {
+    list-style: none; /* Видаляє стандартні маркери */
+}
+
+
+/*header*/
+.header-footer-logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
+}
+
+.header-logo:active {
+    color: var(--ocean);
+}
+
+.header-footer-logo:hover,
+.header-footer-logo:focus {
+    color: var(--ocean);
+}
+
+.header {
+    font-family: var(--second-family), sans-serif;
+    color: var(--iris);
+}
+
+.header-logo-span {
+    color: var(--navy-blue);
+}
+
+.header-menu {
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+}
+
+.header-menu-link {
+    color: var(--navy-blue);
+}
+
+.header-menu-link:hover,
+.header-menu-link:focus {
+    color: var(--ocean);
+}
+
+.header-menu-link:active {
+    color: var(--ocean);
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+}
+
+.header-address-link {
+    font-weight: var(--font-weight-regular);
+    color: var(--slate);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.header-address-link:hover,
+.header-address-link:focus {
+    color: var(--ocean);
+}
+
+
+/*main*/
+.main-section-hero {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.main-section-hero-title {
+    font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.main-section-hero-button {
+    background-color: var(--iris);
+    color: var(--white);
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--font-weight-medium);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+.main-section-hero-button:hover,
+.main-section-hero-button:focus {
+    background-color: var(--ocean);
+}
+
+.main-section-values-title {
+    visibility: hidden;
+}
+
+.main-section-team {
+    background-color: var(--cloud);
+}
+
+.main-section-team-profile {
+    background-color: var(--white);
+}
+
+.main-section-values-subtitle,
+.main-section-team-subtitle,
+.main-section-portfolio-subtitle {
+    font-weight: var(--font-weight-medium);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+}
+
+.main-section-values-p,
+.main-section-team-p,
+.main-section-portfolio-p {
+    color: var(--slate);
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.main-section-team-title,
+.main-section-portfolio-title {
+    font-weight: var(--font-weight-bold);
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--navy-blue);
+}
+
+
+/*footer*/
+.footer {
+    background-color: var(--navy-blue);
+    font-family: "Raleway", sans-serif
+}
+
+.footer-logo-span {
+    color: var(--cloud);
+}
+
+.footer-p {
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud) ;
+}
