@@ -319,15 +319,7 @@ body {
 .footer {
     background-color: var(--navy-blue);
     font-family: "Raleway", sans-serif;
-}
-
-.footer .container {
     padding: 100px 0;
-}
-
-.logo.footer {
-    display: inline-block;
-    margin-bottom: 16px;
 }
 
 .footer-logo-span {
@@ -342,4 +334,5 @@ body {
     letter-spacing: 0.02em;
     color: var(--cloud);
     width: 264px;
+    margin-top: 16px;
 }
