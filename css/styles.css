@@ -1,4 +1,5 @@
 :root {
+/*Fonts*/
     --first-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 
@@ -6,6 +7,7 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
+/*Colors*/
     --iris: #4d5ae5;
     --ocean: #404bbf;
     --navy-blue: #2e2f42;
@@ -18,6 +20,34 @@
     --grey: rgba(46, 47, 66, 0.7);
     --white: #ffffff;
     --dairy: #fcfcfc;
+
+/*Flex params*/
+    /*Base grid params*/
+    --items: 4;
+    --column-gap: 24px;
+    --row-gap: 48px;
+}
+
+/* Обнуляємо маржини для заголовків та параграфів */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/* Скидання підкреслення для посилань */
+a {
+    text-decoration: none; /* Видаляє підкреслення */
+}
+
+/* Видалення маркерів для списків, обнулення дефолтних марджинів та падінгів */
+ul,
+ol {
+    list-style: none; /* Видаляє стандартні маркери */
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
 }
 
 body {
@@ -27,20 +57,37 @@ body {
     color: var(--slate);
 }
 
-/* Скидання підкреслення для посилань */
-a {
-    text-decoration: none; /* Видаляє підкреслення */
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 156px;
 }
-
-/* Видалення маркерів для списків */
-ul,
-ol {
-    list-style: none; /* Видаляє стандартні маркери */
-}
-
 
 /*header*/
-.header-footer-logo {
+.header {
+    font-family: var(--second-family), sans-serif;
+    color: var(--iris);
+    border-bottom: 1px solid var(--cornflower);
+    background-color: var(--white);
+}
+
+.header .container {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.header-nav ul {
+    display: flex;
+}
+
+.logo {
     font-family: "Raleway", sans-serif;
     font-weight: var(--font-weight-bold);
     font-size: 18px;
@@ -48,20 +95,16 @@ ol {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    margin-right: 76px;
 }
 
 .header-logo:active {
     color: var(--ocean);
 }
 
-.header-footer-logo:hover,
-.header-footer-logo:focus {
+.logo:hover,
+.logo:focus {
     color: var(--ocean);
-}
-
-.header {
-    font-family: var(--second-family), sans-serif;
-    color: var(--iris);
 }
 
 .header-logo-span {
@@ -74,11 +117,15 @@ ol {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+    gap: 40px;
 }
 
 .header-menu-link {
     color: var(--navy-blue);
+    display: block;
+    padding: 24px 0;
 }
+
 
 .header-menu-link:hover,
 .header-menu-link:focus {
@@ -90,8 +137,13 @@ ol {
     text-decoration: underline;
 }
 
-address {
+.address {
     font-style: normal;
+}
+
+.address ul {
+    display: flex;
+    gap: 40px;
 }
 
 .header-address-link {
@@ -111,18 +163,24 @@ address {
 /*main*/
 .main-section-hero {
     background-color: var(--navy-blue);
+    padding: 188px 0;
+}
+
+.main-section-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main-section-hero-title {
     color: var(--white);
     font-weight: var(--font-weight-bold);
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    text-align: center;
-}
-
-.main-section-hero-title {
-    font-size: 1em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+    padding-bottom: 48px;
+    width: 496px;
 }
 
 .main-section-hero-button {
@@ -134,6 +192,9 @@ address {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
+    padding: 16px 32px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .main-section-hero-button:hover,
@@ -141,16 +202,84 @@ address {
     background-color: var(--ocean);
 }
 
+.main-section-values {
+    padding: 120px 0;
+}
+
+/* Приховування заголовка*/
 .main-section-values-title {
-    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.main-section-values-list {
+    display: flex;
+    gap: 24px;
 }
 
 .main-section-team {
     background-color: var(--cloud);
+    padding-top: 120px;
 }
 
-.main-section-team-profile {
+.main-section-team-title {
+    padding-bottom: 72px;
+}
+
+.main-section-team-list {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 120px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-section-team-list .item {
     background-color: var(--white);
+}
+
+.main-section-team-list .item img {
+    padding-bottom: 32px;
+}
+
+.profile-content {
+    width: 232px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px 32px;
+}
+
+.main-section-portfolio {
+    padding-top: 120px;
+}
+
+.main-section-portfolio-title {
+    padding-bottom: 72px;
+}
+
+.main-section-portfolio-list {
+    display: flex;
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+}
+
+.item {
+    width: calc((100% - var(--column-gap) * var(--item - 1)) / var(--items));
+}
+
+.profile-portfolio-content {
+    padding: 32px 16px;
 }
 
 .main-section-values-subtitle,
@@ -161,6 +290,7 @@ address {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
+    margin-bottom: 8px;
 }
 
 .main-section-values-p,
@@ -188,7 +318,17 @@ address {
 /*footer*/
 .footer {
     background-color: var(--navy-blue);
-    font-family: "Raleway", sans-serif
+    font-family: "Raleway", sans-serif;
+}
+
+.footer .container {
+    padding-top: 101px;
+    padding-bottom: 189px;
+}
+
+.logo.footer {
+    display: block;
+    padding-bottom: 17px;
 }
 
 .footer-logo-span {
@@ -196,9 +336,11 @@ address {
 }
 
 .footer-p {
+    font-family: "Roboto", sans-serif;
     font-weight: var(--font-weight-regular);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--cloud) ;
+    color: var(--cloud);
+    width: 264px;
 }
