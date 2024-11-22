@@ -23,7 +23,8 @@
 
     /*Flex params*/
     /*Base grid params*/
-    --items: 4;
+    --four-items: 4;
+    --three-items: 3;
     --column-gap: 24px;
     --row-gap: 48px;
 }
@@ -231,6 +232,10 @@ body {
     gap: var(--column-gap);
 }
 
+.item {
+    width: calc((100% - (var(--four-items) - 1) * var(--column-gap)) / var(--four-items));
+}
+
 .main-section-team {
     background-color: var(--cloud);
     padding: 120px 0;
@@ -251,7 +256,7 @@ body {
 
 .profile-content {
     text-align: center;
-    padding: 32px 16px 32px;
+    padding: 32px 0;
 }
 
 .main-section-portfolio {
@@ -263,11 +268,11 @@ body {
     column-gap: var(--column-gap);
     row-gap: var(--row-gap);
     flex-wrap: wrap;
-
 }
 
-.item {
-    width: calc((100% - var(--column-gap) * var(--items -1)) / var(--items));
+
+.item-portfolio {
+    width: calc((100% - (var(--three-items) - 1) * var(--column-gap)) / var(--three-items));
 }
 
 .profile-portfolio-content {
