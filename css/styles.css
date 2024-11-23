@@ -66,7 +66,6 @@ body {
 
 /*header*/
 .header {
-    font-family: var(--second-family), sans-serif;
     color: var(--iris);
     border-bottom: 1px solid var(--cornflower);
     background-color: var(--white);
@@ -74,7 +73,6 @@ body {
 
 .header .container {
     display: flex;
-    /*justify-content: space-between;*/
     align-items: center;
 }
 
@@ -96,6 +94,8 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
+    display: inline-block;
+    /*margin-bottom: 16px;*/
     margin-right: 76px;
 }
 
@@ -183,7 +183,7 @@ body {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
-    padding-bottom: 48px;
+    margin-bottom: 48px;
     max-width: 496px;
 }
 
@@ -326,11 +326,6 @@ body {
     color: var(--cloud);
 }
 
-.container a {
-    display: inline-block;
-    margin-bottom: 16px;
-}
-
 .footer-p {
     font-family: "Roboto", sans-serif;
     font-weight: var(--font-weight-regular);
@@ -339,4 +334,5 @@ body {
     letter-spacing: 0.02em;
     color: var(--cloud);
     width: 264px;
+    margin-top: 16px;
 }
